@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Student Task Management System</h1>
+
+        <section class="task-form">
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+                <label for="taskTitle">Task Title</label>
+                <input type="text" id="taskTitle" placeholder="Enter task title">
+
+                <label for="taskDescription">Task Description</label>
+                <textarea id="taskDescription" placeholder="Enter task description"></textarea>
+
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <section class="task-list">
+            <h2>Student Tasks</h2>
+
+            <div id="tasks">
+                <div class="task">
+                    <h3>Complete DevOps Assignment</h3>
+                    <p>Finish the Git assignment and prepare the required report.</p>
+                </div>
+
+                <div class="task">
+                    <h3>Study for Quiz</h3>
+                    <p>Review the important topics for the upcoming quiz.</p>
+                </div>
+
+                <div class="task">
+                    <h3>Submit Project</h3>
+                    <p>Complete the project and submit it before the deadline.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
