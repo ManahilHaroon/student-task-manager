@@ -20,9 +20,26 @@ taskForm.addEventListener("submit", function (event) {
     newTask.innerHTML = `
         <h3>${title}</h3>
         <p>${description}</p>
+
+        <label>Status:</label>
+        <select class="task-status">
+            <option value="Pending">Pending</option>
+            <option value="Completed">Completed</option>
+        </select>
     `;
 
     tasks.appendChild(newTask);
 
     taskForm.reset();
+
+    setupStatus(newTask.querySelector(".task-status"));
 });
+
+function setupStatus(statusSelect) {
+    statusSelect.addEventListener("change", function () {
+        const task = this.closest(".task");
+        task.dataset.status = this.value;
+    });
+}
+
+document.querySelectorAll(".task-status").forEach(setupStatus);
