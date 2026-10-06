@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +16,7 @@
             <h2>Add New Task</h2>
 
             <form id="taskForm">
+
                 <label for="taskTitle">Task Title</label>
                 <input
                     type="text"
@@ -30,15 +32,17 @@
                     required
                 ></textarea>
 
-                <label for="taskPriority">Priority</label>
+                <!-- Task Priority Feature -->
+                <label for="taskPriority">Task Priority</label>
                 <select id="taskPriority" required>
-                    <option value="">Select Priority</option>
+                    <option value="">-- Select Priority --</option>
                     <option value="High">High</option>
                     <option value="Medium">Medium</option>
                     <option value="Low">Low</option>
                 </select>
 
                 <button type="submit">Add Task</button>
+
             </form>
         </section>
 
@@ -47,52 +51,70 @@
 
             <div id="tasks">
 
+                <!-- Existing Task 1 -->
                 <div class="task">
                     <h3>Complete DevOps Assignment</h3>
                     <p>Finish the Git assignment and prepare the required report.</p>
 
-                    <label>Priority:</label>
-                    <span class="priority-label medium">Medium</span>
+                    <div class="task-priority">
+                        <label>Priority:</label>
+                        <span class="priority-label medium">Medium</span>
+                    </div>
 
-                    <label>Status:</label>
-                    <select class="task-status">
-                        <option value="Pending">Pending</option>
-                        <option value="Completed">Completed</option>
-                    </select>
+                    <div class="task-status-container">
+                        <label>Status:</label>
+                        <select class="task-status">
+                            <option value="Pending">Pending</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                    </div>
                 </div>
 
+                <!-- Existing Task 2 -->
                 <div class="task">
                     <h3>Study for Quiz</h3>
                     <p>Review the important topics for the upcoming quiz.</p>
 
-                    <label>Priority:</label>
-                    <span class="priority-label high">High</span>
+                    <div class="task-priority">
+                        <label>Priority:</label>
+                        <span class="priority-label high">High</span>
+                    </div>
 
-                    <label>Status:</label>
-                    <select class="task-status">
-                        <option value="Pending">Pending</option>
-                        <option value="Completed">Completed</option>
-                    </select>
+                    <div class="task-status-container">
+                        <label>Status:</label>
+                        <select class="task-status">
+                            <option value="Pending">Pending</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                    </div>
                 </div>
 
+                <!-- Existing Task 3 -->
                 <div class="task">
                     <h3>Submit Project</h3>
                     <p>Complete the project and submit it before the deadline.</p>
 
-                    <label>Priority:</label>
-                    <span class="priority-label low">Low</span>
+                    <div class="task-priority">
+                        <label>Priority:</label>
+                        <span class="priority-label low">Low</span>
+                    </div>
 
-                    <label>Status:</label>
-                    <select class="task-status">
-                        <option value="Pending">Pending</option>
-                        <option value="Completed">Completed</option>
-                    </select>
+                    <div class="task-status-container">
+                        <label>Status:</label>
+                        <select class="task-status">
+                            <option value="Pending">Pending</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                    </div>
                 </div>
 
             </div>
         </section>
+
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
+```

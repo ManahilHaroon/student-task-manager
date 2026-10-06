@@ -118,7 +118,6 @@ button:hover {
     margin-top: 5px;
 }
 
-/* Responsive layout */
 @media (max-width: 600px) {
     body {
         padding: 10px;
