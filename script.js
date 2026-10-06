@@ -1,6 +1,7 @@
 const taskForm = document.getElementById("taskForm");
 const taskTitle = document.getElementById("taskTitle");
 const taskDescription = document.getElementById("taskDescription");
+const taskPriority = document.getElementById("taskPriority");
 const tasks = document.getElementById("tasks");
 
 taskForm.addEventListener("submit", function (event) {
@@ -8,9 +9,17 @@ taskForm.addEventListener("submit", function (event) {
 
     const title = taskTitle.value.trim();
     const description = taskDescription.value.trim();
+    const priority = taskPriority.value;
 
+    // Validate task title and description
     if (title === "" || description === "") {
         alert("Please enter both a task title and description.");
+        return;
+    }
+
+    // Validate priority
+    if (priority === "") {
+        alert("Please select a task priority.");
         return;
     }
 
@@ -20,6 +29,9 @@ taskForm.addEventListener("submit", function (event) {
     newTask.innerHTML = `
         <h3>${title}</h3>
         <p>${description}</p>
+
+        <label>Priority:</label>
+        <span class="priority-label ${priority.toLowerCase()}">${priority}</span>
 
         <label>Status:</label>
         <select class="task-status">
